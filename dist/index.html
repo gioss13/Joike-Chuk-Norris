@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="CK Joke test for 24ore BS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS, JS" />
+    <meta name="author" content="Giovanni Cirillo" />
+    <title>Chuck Norris Test</title>
+    <link rel="icon"type="image/x-icon"href="https://api.chucknorris.io/img/favicon.ico"/>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&family=Play:wght@400;700&display=swap"rel="stylesheet"/>
+  </head>
+  <body>
+  <header>
+    <a class="ck-banner buzz-out-on-hover" href="https://api.chucknorris.io/" target="_blank">
+      <picture> 
+      <source media="(min-width:650px)" srcset=" https://api.chucknorris.io/img/chucknorris_logo_coloured_small@2x.png " /> 
+      <sourcemedia ="(min-width:465px)" srcset="https://api.chucknorris.io/img/chucknorris_logo_coloured_small@2x.png" /> 
+      <img class="" alt="" src="https://api.chucknorris.io/img/chucknorris_logo_coloured_small@2x.png" /></picture>
+    </a>
+  </header>
+    <main role="main" id="content">
+      <section>
+        <!-- Random Block-->
+        <article class="ck-banner_container">
+        <div class="ck-row">
+          <div class="ck-item">
+          <!-- input Block-->
+          <!-- old solution <input type="text"placeholder="scrivi"id="ckInput"name="ck-input"value=""onchange="searchFunc()"/>-->
+            <input type="text"placeholder="scrivi"id="ckInput"name="ck-input"value=""/>
+            <!-- Button search Block-->
+            <!-- old solution <button onclick="searchFunc()" class="ck-search"> <i class="fas fa-search"></i> </button>-->
+             <button class="ck-search" id="ckSearch"> <i class="fas fa-search"></i></button>
+          </div>
+        </div>
+        <div class="ck-row">
+        <!-- Output search txt Block-->
+          <div class="ck-item">
+            <p id="outputSearch">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+            </p>
+          </div>
+        </div>
+      </article>
+        <!-- Search Block-->
+        <article class="ck-banner_container">
+        <div class="ck-row">
+          <div class="ck-item">
+            <h2>
+              Stai attento io sono <span>Chuck Norris</span> e questo è quello che mi frulla per la testa
+              ogni 3 secondi:
+            </h2>
+          </div>
+          <!-- Output random Block-->
+          <div class="ck-item"><p id="ck-output"></p></div>
+        </div>
+      </article>
+      <section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
