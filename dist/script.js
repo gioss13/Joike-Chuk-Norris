@@ -12,7 +12,7 @@ const options = {
   }
 };
 
-//viene chiamata all'onclik del bottone e anche al onchage dell'input
+//Fn viene chiamata all'onclik del bottone e anche al onchage dell'input
 function searchFunc() {
   const inputVal = document.getElementById("ckInput").value //variabilizzo il valore inserito dell'input
   const outputSearch = document.getElementById("outputSearch") //variabilizzo l'output della risultato della chiamata di ricerca
@@ -21,13 +21,16 @@ function searchFunc() {
     return res.json(); //response
   }).then((data) => { //recuperiamo il data che e' la risposta della chiamata, recuperiamo il data nell'object della res
     
+    // vecchia soluzione iniziata ma non terminata perchè non in grado :
     // outputSearch.innerText = data.result.map(value => value.value) //tutte le frasi ma ho avuto problemi con ciclo di P in html
-    outputSearch.innerText = data.total > 1 ? data.result[0].value : 'non ho trovato nulla' 
+
+
     //stampo nel p. = Verifico se il total che si trova nell'oggetto della response sia > 1 (cosi ho risultati) e prendo il primo risultato dell'array altrimenti restituisco la stringa non ho trovato nulla
+    outputSearch.innerText = data.total > 1 ? data.result[0].value : 'non ho trovato nulla'
 })
 }
 
-(function ckLoop() { //funzione di loop
+(function ckLoop() { //Fn di loop per frase randomica ogni 3000ms
   setTimeout(function () { //metodo js
     fetch(urlRandom, options)
         .then((res) => {
