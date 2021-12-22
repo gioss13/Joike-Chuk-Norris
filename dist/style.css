@@ -148,7 +148,7 @@ button:focus {
   }
 
   .ck-banner_container {
-    width: 800px;
+    max-width: 800px;
     transition: all 300ms ease-in-out;
   }
   .ck-item h2 {
